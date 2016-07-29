@@ -35,6 +35,7 @@
 #include <bl_common.h>
 #include <bl31.h>
 #include <console.h>
+#include <generic_delay_timer.h>
 #include <mmio.h>
 #include <platform.h>
 #include <stddef.h>
@@ -221,6 +222,8 @@ void bl31_early_platform_setup(bl31_params_t *from_bl2,
  ******************************************************************************/
 void bl31_platform_setup(void)
 {
+	/* Initialize Generic delay timer */
+	 generic_delay_timer_init();
 	/* Initialize the gic cpu and distributor interfaces */
 	arm_gic_init(GICC_BASE, GICD_BASE, 0, NULL, 0);
 	arm_gic_setup();
