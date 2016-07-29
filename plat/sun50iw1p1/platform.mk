@@ -38,18 +38,20 @@ PLAT_BL_COMMON_SOURCES	:= lib/aarch64/xlat_tables.c			\
 
 
 
-BL31_SOURCES		+=	drivers/arm/gic/arm_gic.c		\
-				drivers/arm/gic/gic_v2.c		\
-				drivers/arm/gic/gic_v3.c		\
-				lib/cpus/aarch64/cortex_a53.S		\
-				plat/common/plat_gic.c			\
-				plat/common/aarch64/platform_mp_stack.S	\
-				plat/sun50iw1p1/bl31_sunxi_setup.c	\
-				plat/sun50iw1p1/plat_pm.c		\
-				plat/sun50iw1p1/sunxi_security.c	\
-				plat/sun50iw1p1/sunxi_power.c		\
-				plat/sun50iw1p1/sunxi_cpu_ops.c		\
-				plat/sun50iw1p1/plat_topology.c		\
-				plat/sun50iw1p1/aarch64/plat_helpers.S	\
+BL31_SOURCES		+=	drivers/arm/gic/arm_gic.c			\
+				drivers/arm/gic/gic_v2.c			\
+				drivers/arm/gic/gic_v3.c			\
+				drivers/delay_timer/delay_timer.c		\
+                                drivers/delay_timer/generic_delay_timer.c       \
+				lib/cpus/aarch64/cortex_a53.S			\
+				plat/common/plat_gic.c				\
+				plat/common/aarch64/platform_mp_stack.S		\
+				plat/sun50iw1p1/bl31_sunxi_setup.c		\
+				plat/sun50iw1p1/plat_pm.c			\
+				plat/sun50iw1p1/sunxi_security.c		\
+				plat/sun50iw1p1/sunxi_power.c			\
+				plat/sun50iw1p1/sunxi_cpu_ops.c			\
+				plat/sun50iw1p1/plat_topology.c			\
+				plat/sun50iw1p1/aarch64/plat_helpers.S		\
 				plat/sun50iw1p1/aarch64/sunxi_common.c
 

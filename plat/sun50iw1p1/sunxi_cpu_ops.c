@@ -33,6 +33,7 @@
 #include <platform_def.h>
 #include <mmio.h>
 #include <debug.h>
+#include <delay_timer.h>
 #include <bakery_lock.h>
 #include "sunxi_def.h"
 #include "sunxi_private.h"
@@ -61,17 +62,8 @@
  static unsigned int sun50i_prcm_base = SUN50I_PRCM_PBASE;
  static unsigned int sun50i_r_cpucfg_base = SUN50I_RCPUCFG_PBASE;
  extern bakery_lock_t plat_console_lock;
- void udelay(unsigned int delay)
- {
-	 unsigned int i, j;
  
-	 for (i=0; i<1000*delay; i++)
-	 {
-		 j+=i;
-	 }
- }
- 
- void sun50i_set_secondary_entry(unsigned long entry, unsigned int cpu)
+void sun50i_set_secondary_entry(unsigned long entry, unsigned int cpu)
  {
 	 mmio_write_32(sun50i_cpucfg_base + SUNXI_CPU_RVBA_L(cpu) ,entry);
 	 mmio_write_32(sun50i_cpucfg_base + SUNXI_CPU_RVBA_H(cpu), 0);
