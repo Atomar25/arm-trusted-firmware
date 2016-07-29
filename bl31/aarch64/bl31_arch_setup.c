@@ -49,7 +49,7 @@ void bl31_arch_setup(void)
 	write_scr_el3(SCR_RES1_BITS);
 
 	/* Program the counter frequency */
-	write_cntfrq_el0(plat_get_syscnt_freq());
+	write_cntfrq_el0(plat_get_syscnt_freq2());
 
 	/* Initialize the cpu_ops pointer. */
 	init_cpu_ops();

@@ -89,7 +89,7 @@ unsigned long plat_get_ns_image_entrypoint(void)
 	return NS_IMAGE_OFFSET;
 }
 
-uint64_t plat_get_syscnt_freq(void)
+unsigned int plat_get_syscnt_freq2(void)
 {
 	return 24 * 1000 * 1000;
 }

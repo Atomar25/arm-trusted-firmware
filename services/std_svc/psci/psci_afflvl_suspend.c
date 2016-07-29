@@ -403,7 +403,7 @@ static unsigned int psci_afflvl0_suspend_finish(aff_map_node_t *cpu_node)
 {
 	unsigned int plat_state, state, rc;
 	int32_t suspend_level;
-	uint64_t counter_freq;
+	unsigned int counter_freq;
 
 	assert(cpu_node->level == MPIDR_AFFLVL0);
 
@@ -437,7 +437,7 @@ static unsigned int psci_afflvl0_suspend_finish(aff_map_node_t *cpu_node)
 	psci_do_pwrup_cache_maintenance();
 
 	/* Re-init the cntfrq_el0 register */
-	counter_freq = plat_get_syscnt_freq();
+	counter_freq = plat_get_syscnt_freq2();
 	write_cntfrq_el0(counter_freq);
 
 	/*
