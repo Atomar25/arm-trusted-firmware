@@ -70,6 +70,9 @@ int sunxi_pmic_setup(void);
 int sunxi_pmic_read(uint8_t address);
 int sunxi_pmic_write(uint8_t address, uint8_t value);
 
+/*  Declarations for sunxi_ths.c */
+int sunxi_ths_setup(void);
+
 /* Gets the SPSR for BL33 entry */
 uint32_t sunxi_get_spsr_for_bl33_entry(int aarch);
 

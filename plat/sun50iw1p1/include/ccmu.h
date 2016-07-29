@@ -63,6 +63,7 @@
 
 #define CCMU_USBPHY_CLK_REG               (SUNXI_CCM_BASE + 0xCC)
 #define CCMU_DRAM_CLK_REG                 (SUNXI_CCM_BASE + 0xF4)
+#define CCMU_THS_CLK_REG                  (SUNXI_CCM_BASE + 0x74)
 #define CCMU_PLL_DDR_CFG_REG              (SUNXI_CCM_BASE + 0xF8)
 #define CCMU_MBUS_RST_REG                 (SUNXI_CCM_BASE + 0xFC)
 #define CCMU_DRAM_CLK_GATING_REG          (SUNXI_CCM_BASE + 0x100)

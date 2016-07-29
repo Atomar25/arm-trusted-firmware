@@ -34,6 +34,7 @@
 #define SUNXI_CCM_BASE			0x01c20000
 #define SUNXI_PIO_BASE			0x01c20800
 #define SUNXI_UART0_BASE		0x01c28000
+#define SUNXI_THS_BASE                  0x01c25000
 #define GICD_BASE			0x01c81000
 #define GICC_BASE			0x01c82000
 

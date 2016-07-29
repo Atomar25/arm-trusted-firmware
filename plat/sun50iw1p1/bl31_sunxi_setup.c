@@ -232,6 +232,7 @@ void bl31_platform_setup(void)
 	plat_setup_topology();
 
 	sunxi_pmic_setup();
+	sunxi_ths_setup();
 }
 
 /*******************************************************************************
